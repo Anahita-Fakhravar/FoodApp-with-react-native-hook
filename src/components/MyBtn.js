@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: Colors.white,
         paddingVertical: hp('1.5%'),
-        paddingHorizontal: wp('10%'),
-        fontSize: hp('2%'),
+        paddingHorizontal: wp('8%'),
+        fontSize: hp('2.5%'),
         fontWeight: 'bold',
     },
     btn: {
