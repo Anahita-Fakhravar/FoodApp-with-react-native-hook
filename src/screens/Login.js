@@ -6,6 +6,7 @@ import MyTextInput from '../components/MyTextInput';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import MyBtn from '../components/MyBtn';
 import {Navigation} from 'react-native-navigation';
+import {Logo} from '../components/ConstValues';
 
 const Login = (props) => {
 
@@ -17,7 +18,7 @@ const Login = (props) => {
         <KeyboardAvoidingView behavior='position' keyboardVerticalOffset={keyboardVerticalOffset}
                               style={styles.mainContainer}>
 
-            <Image style={styles.img} source={require('../assets/icons/food.png')}/>
+            <Image style={styles.img} source={Logo}/>
 
             <Text style={styles.txt}>{Strings.EnterName}</Text>
 
@@ -42,10 +43,10 @@ const styles = StyleSheet.create({
     },
     txt: {
         marginBottom: hp('2%'),
-        marginLeft: wp('3%'),
+        marginLeft: wp('4%'),
         color: Colors.theme2,
         fontWeight: 'bold',
-        fontSize: hp('3%'),
+        fontSize: hp('2.5%'),
     },
     img: {
         width: wp('50%'),

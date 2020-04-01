@@ -1,7 +1,5 @@
 import React from 'react';
 import {View, StyleSheet, Text, FlatList} from 'react-native';
-import {Navigation} from 'react-native-navigation';
-import Colors from '../assets/colors';
 import MyTopBar from '../components/MyTopBar';
 
 
@@ -16,7 +14,6 @@ const Main = (props) => {
         };
     };
 
-    console.log('Main Props ana', props);
     return (
         <View style={styles.mainContainer}>
             <Text>Main</Text>
