@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, StyleSheet, Text, FlatList} from 'react-native';
 import MyTopBar from '../components/MyTopBar';
+import GlobalContext from '../context/GlobalContext'
 
+const Main = () => {
 
-const Main = (props) => {
+    const rasoul = useContext(GlobalContext);
 
     const options = (passProps) => {
         return {
@@ -15,8 +17,9 @@ const Main = (props) => {
     };
 
     return (
+
         <View style={styles.mainContainer}>
-            <Text>Main</Text>
+            <Text>Main {rasoul}</Text>
         </View>
 
     );

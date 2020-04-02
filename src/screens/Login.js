@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, StyleSheet, Text, Image, KeyboardAvoidingView, Platform, Alert} from 'react-native';
 import Colors from '../assets/colors';
 import Strings from '../assets/strings';
@@ -7,9 +7,11 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import MyBtn from '../components/MyBtn';
 import {Navigation} from 'react-native-navigation';
 import {Logo} from '../components/ConstValues';
+import GlobalContext from '../context/GlobalContext';
 
 const Login = (props) => {
 
+    const rasoul = useContext(GlobalContext);
     console.log('props ana',props);
 
     const keyboardVerticalOffset = Platform.OS === 'ios' ? hp('20%') : -hp('20%');
@@ -27,6 +29,8 @@ const Login = (props) => {
             <MyBtn OnBtnPress={() =>Navigation.push(props.componentId, {component: {
                     name: 'myMain',
                 }})}/>
+
+            <Text>ana {rasoul}</Text>
 
         </KeyboardAvoidingView>
 

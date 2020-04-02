@@ -3,11 +3,9 @@
  */
 
 import {Navigation} from 'react-native-navigation';
-import Login from './src/screens/Login';
-import Main from './src/screens/Main';
+import {App} from './App'
 
-Navigation.registerComponent(`myLogin`, () => Login);
-Navigation.registerComponent(`myMain`, () => Main);
+App();
 
 Navigation.events().registerAppLaunchedListener(() => {
     Navigation.setRoot({
