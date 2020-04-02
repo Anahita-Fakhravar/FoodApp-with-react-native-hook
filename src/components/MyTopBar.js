@@ -1,6 +1,7 @@
 import React from 'react';
 import Colors from '../assets/colors';
-import {TopBarRBtn} from './ConstValues'
+import {TopBarRBtn, TopBarRBtnIos} from './ConstValues';
+import {Platform} from 'react-native';
 
 export default (Title) => {
     return (
@@ -17,12 +18,13 @@ export default (Title) => {
                     fontSize: 16,
                     color: Colors.theme2,
                     alignment: 'center',
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                 },
                 rightButtons: [
                     {
-                        icon: TopBarRBtn,
+                        icon: Platform.OS === 'ios' ? TopBarRBtnIos : TopBarRBtn,
                         id: 'buttonId',
+
                     },
                 ],
             },
