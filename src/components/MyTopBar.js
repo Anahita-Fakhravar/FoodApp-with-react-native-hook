@@ -23,6 +23,7 @@ export default (Title) => {
                     {
                         icon: TopBarRBtn,
                         id: 'buttonId',
+                        fontSize: 10,
                     },
                 ],
             },
